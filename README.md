@@ -3,7 +3,11 @@
 
 
 # Para iniciar o projeto:
-# caso esteja fora da pasta raiz (cojaro-inscricao-2025)
-# cd cojaro-inscricao-2025
-# npm i
-# npm run dev
+│
+└ caso esteja fora da pasta raiz (cojaro-inscricao-2025)
+│
+└ cd cojaro-inscricao-2025
+│
+└ npm i
+│
+└ npm run dev
