@@ -5,9 +5,9 @@
 
       <h1>Inscrição - Cojaro 2k25</h1>
 
-      <form @submit.prevent="submitForm" action="https://api.sheetmonkey.io/form/232sTS7uf976XrV3ZVxjP" method="post">
+      <form @submit.prevent="submitForm" action="https://api.sheetmonkey.io/form/vo3ePUoBFLrrX8fMGdPR9e" method="post">
         <label for="nome">Nome Completo:</label>
-        <input type="tehttps://github.com/sntxs/cojaro-2025.gitxt" id="nome" name="Nome Completo" v-model="formData.nome" required>
+        <input type="text" id="nome" name="Nome Completo" v-model="formData.nome" required>
 
         <label for="estado">Estado:</label>
         <select id="estado" v-model="formData.estado" @change="atualizarCidades" name="Estado" required>
@@ -29,7 +29,7 @@
           <option value="">Selecione</option>
           <option value="gratis">Até 5 anos - Grátis</option>
           <option value="meia">6 a 10 anos - Meia Taxa</option>
-          <option value="inteira">11 anos ou mais - Taxa Inteira</option>
+          <option value="inteira">11 anos ou mais - Taxa     Inteira</option>
         </select>
 
         <label for="cpf">CPF:</label>
@@ -51,14 +51,14 @@
         <label for="pagamento">Forma de Pagamento:</label>
         <select id="pagamento" name="Forma de Pagamento" v-model="formData.pagamento" required>
           <option value="">Selecione</option>
-          <option value="pix1x">PIX - 1x</option>
+          <option value="pix">PIX</option>
           <option value="pix2x">PIX - 2x</option>
           <option value="pix3x">PIX - 3x</option>
           <option value="credito">Cartão de Crédito</option>
           <option value="debito">Cartão de Débito</option>
         </select>
 
-        <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+        <input type="hidden" name="Data de Cadastro" value="x-sheetmonkey-current-date-time" />
         <button class="btn-enviar" type="submit">Enviar Inscrição</button>
       </form>
     </div>
