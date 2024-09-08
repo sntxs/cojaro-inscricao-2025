@@ -9,6 +9,16 @@
         <label for="nome">Nome Completo:</label>
         <input type="text" id="nome" name="Nome Completo" v-model="formData.nome" required>
 
+        <label for="nascimento">Data de Nascimento:</label>
+        <input type="date" id="nascimento" name="Data de Nascimento" v-model="formData.nascimento" required>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="CPF" v-model="formData.cpf" required v-mask="'###.###.###-##'">
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="Telefone" v-model="formData.telefone" required
+          v-mask="telefoneOptions.mask">
+
         <label for="estado">Estado:</label>
         <select id="estado" v-model="formData.estado" @change="atualizarCidades" name="Estado" required>
           <option value="">Selecione o Estado</option>
@@ -21,32 +31,23 @@
           <option v-for="cidade in cidadesDisponiveis" :key="cidade" :value="cidade">{{ cidade }}</option>
         </select>
 
-        <label for="nascimento">Data de Nascimento:</label>
-        <input type="date" id="nascimento" name="Data de Nascimento" v-model="formData.nascimento" required>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="E-mail" v-model="formData.email" required>
+
+
+        <label for="campo">Campo Eclesiástico:</label>
+        <input type="text" id="campo" name="Campo Eclesiástico" v-model="formData.campo" required>
+
+        <label for="lider">Nome do Líder:</label>
+        <input type="text" id="lider" name="Nome do Líder" v-model="formData.lider" required>
 
         <label for="taxa">Tipo de Taxa:</label>
         <select id="taxa" v-model="formData.taxa" name="Tipo de Taxa" required>
           <option value="">Selecione</option>
           <option value="gratis">Até 5 anos - Grátis</option>
           <option value="meia">6 a 10 anos - Meia Taxa</option>
-          <option value="inteira">11 anos ou mais - Taxa     Inteira</option>
+          <option value="inteira">11 anos ou mais - Taxa Inteira</option>
         </select>
-
-        <label for="cpf">CPF:</label>
-        <input type="text" id="cpf" name="CPF" v-model="formData.cpf" required v-mask="'###.###.###-##'">
-
-        <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" name="Telefone" v-model="formData.telefone" required
-          v-mask="telefoneOptions.mask">
-
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="E-mail" v-model="formData.email" required>
-
-        <label for="lider">Nome do Líder:</label>
-        <input type="text" id="lider" name="Nome do Líder" v-model="formData.lider" required>
-
-        <label for="campo">Campo Eclesiástico:</label>
-        <input type="text" id="campo" name="Campo Eclesiástico" v-model="formData.campo" required>
 
         <label for="pagamento">Forma de Pagamento:</label>
         <select id="pagamento" name="Forma de Pagamento" v-model="formData.pagamento" required>
